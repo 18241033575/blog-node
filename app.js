@@ -3,7 +3,7 @@ const bodyParser = require('koa-bodyparser');
 const logger = require('koa-logger');
 const router = require('./routers/index');
 
-
+const config = require('./config');
 
 const { join } = require('path');
 // import mongoose from 'mongoose'
@@ -18,6 +18,6 @@ app.use(router.routes()).use(router.allowedMethods());
 
 
 
-app.listen('8888', () => {
-   console.log('服务器运行在3000端口');
+app.listen(config.port, () => {
+   console.log(`服务器运行在${config.port}端口`);
 });
