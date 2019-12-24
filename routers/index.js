@@ -42,12 +42,10 @@ router.get('/', async (ctx, next) => {
     ctx.set("Content-Type", "application/json");
     ctx.body = JSON.stringify(data)
 });
+
+
 // 登录接口
 router.post('/login', async (ctx, next) => {
-    ctx.set('Access-Control-Allow-Origin', '*');
-    ctx.set("Content-Type", "application/json");
-    ctx.set("Access-Control-Allow-Headers", "X-Requested-With");
-    ctx.set("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     const Users = db.collection('user');
     await new Promise((resolve, reject) => {
         Users.findOne({ name: ctx.request.body.username },(err, res) => {
@@ -75,10 +73,6 @@ router.post('/login', async (ctx, next) => {
 
 // 获取后台用户
 router.get('/netUser', async (ctx, next) => {
-    ctx.set('Access-Control-Allow-Origin', '*');
-    ctx.set("Content-Type", "application/json");
-    ctx.set("Access-Control-Allow-Headers", "X-Requested-With");
-    ctx.set("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     const netUsers = db.collection('manage_user');
     await new Promise((resolve, reject) => {
         netUsers.find().toArray((err, res) => {
@@ -102,10 +96,6 @@ router.get('/netUser', async (ctx, next) => {
 
 // 获取全部消息
 router.get('/message', async (ctx, next) => {
-    ctx.set('Access-Control-Allow-Origin', '*');
-    ctx.set("Content-Type", "application/json");
-    ctx.set("Access-Control-Allow-Headers", "X-Requested-With");
-    ctx.set("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     const Message = db.collection('message');
     await new Promise((resolve, reject) => {
         Message.find().toArray((err, res) => {
@@ -130,10 +120,6 @@ router.get('/message', async (ctx, next) => {
 
 // 获取系统分类
 router.get('/category', async (ctx, next) => {
-    ctx.set('Access-Control-Allow-Origin', '*');
-    ctx.set("Content-Type", "application/json");
-    ctx.set("Access-Control-Allow-Headers", "X-Requested-With");
-    ctx.set("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     const Category = db.collection('skills_category');
     await new Promise((resolve, reject) => {
         Category.find().toArray((err, res) => {

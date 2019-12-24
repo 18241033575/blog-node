@@ -6,29 +6,42 @@
 
 // 使用schema
 const Category = require('../Schema/category');
-
 // 操作方法
+// 获取分类列表
 const getCategoryList = async (ctx, next) => {
     const req = ctx.request.body;
 
-    const test = await User.find({
-        status: req.status
-    }, { _id: 0 });
+    const category = await Category.find({isShow: 1});
+    console.log(1);
+    console.log(category);
 
-    if (test) {
-        ctx.status = 200;
-        ctx.body = {
+    if (category) {
+       ctx.body = {
             code: 200,
-            data: test
+            data: category
         }
     } else {
         ctx.body = {
             code: 400,
-            msg: '操作失败'
+            msg: 'category'
         }
     }
 };
 
+// 编辑分类
+const editCategory = async (ctx, next) => {
+  const req = ctx.request.body;
+
+
+};
+
+// 删除分类
+const delCategory = async (ctx, next) => {
+  const req = ctx.request.body;
+};
+
 module.exports = {
-    getCategoryList
+    getCategoryList,
+    editCategory,
+    delCategory
 };

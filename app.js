@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const logger = require('koa-logger');
-const router = require('./routers/index');
+const cors = require("koa2-cors");
 
 const config = require('./config');
 
@@ -10,9 +10,12 @@ const { join } = require('path');
 
 const app = new Koa();
 app.use(logger());
+app.use(cors());
 app.use(bodyParser());
-app.use(router.routes()).use(router.allowedMethods());
 
+
+const category = require('./routers/category');
+app.use(category.routes()).use(category.allowedMethods());
 
 
 
