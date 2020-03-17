@@ -26,19 +26,23 @@ const getCategory = async (ctx, next) => {
 };
 // 添加分类
 const addCategory = async (ctx, next) => {
-  const req = ctx.request.body;
-  const category = await Category.insert({ value: req.value });
-    if (category) {
-        ctx.body = {
-            code: 200,
-            msg: '添加成功'
-        }
-    } else {
-        ctx.body = {
-            code: 400,
-            msg: '添加失败'
+    const req = ctx.request.body;
+    console.log(req);
+    if (req.type === 'add') {
+        const category = await Category.insert({value: req.value});
+        if (category) {
+            ctx.body = {
+                code: 200,
+                msg: '添加成功'
+            }
+        } else {
+            ctx.body = {
+                code: 400,
+                msg: '添加失败'
+            }
         }
     }
+
 };
 
 
@@ -52,8 +56,8 @@ const editCategory = async (ctx, next) => {
         };
         return
     }
-
-    const category = await Category.update({id: req.id},{$set: {value: req.value}});
+    console.log(Category);
+    const category = await Category.insertOne({id: req.id}, {$set: {value: req.value}});
     if (category) {
         ctx.body = {
             code: 200,
@@ -70,7 +74,7 @@ const editCategory = async (ctx, next) => {
 // 删除分类
 const delCategory = async (ctx, next) => {
     const req = ctx.request.body;
-    const category = await Category.remove({id: req.id},{ justOne: true })
+    const category = await Category.remove({id: req.id}, {justOne: true})
     if (category) {
         ctx.body = {
             code: 200,

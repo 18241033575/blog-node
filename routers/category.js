@@ -5,8 +5,8 @@ const user_operate = require('../Control/category');
 
 router.get('/category', user_operate.getCategory);
 router.post('/category', user_operate.addCategory);
-router.post('/category', user_operate.editCategory);
-router.post('/category', user_operate.delCategory);
+// router.post('/category', user_operate.editCategory);
+// router.post('/category', user_operate.delCategory);
 
 
 
