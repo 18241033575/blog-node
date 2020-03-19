@@ -4,52 +4,14 @@
     <list default="true" id="bf385217-8fa7-406a-9994-fc00a2262e07" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/Control/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.lock" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.turtle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/db/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/WiredTiger.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/_mdb_catalog.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/_mdb_catalog.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-0--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-0--7363761554540141115.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-0--7527981018667418891.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-0--7993331218360556053.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-0-1107468662308559184.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-0-97759517957556351.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-2--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-2-1107468662308559184.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-2-6068714266212445460.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-4-6068714266212445460.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-5--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-6-6068714266212445460.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/collection-7--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2019-12-09T00-30-16Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2019-12-10T00-43-01Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2019-12-23T02-41-21Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2019-12-24T00-47-56Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2019-12-25T00-33-31Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2019-12-25T02-41-20Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/diagnostic.data/metrics.2019-12-25T02-47-04Z-00000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-1--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-1--7363761554540141115.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-1--7527981018667418891.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-1--7993331218360556053.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-1-1107468662308559184.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-1-97759517957556351.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-3--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-3-1107468662308559184.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-3-6068714266212445460.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-4--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-5-6068714266212445460.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-6--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-7-6068714266212445460.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/index-8--7254337008480473793.wt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/journal/WiredTigerLog.0000000020" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/mongod.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/collection-0-1187169012112360672.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/collection-0-1187169012112360672.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/collection-7-1187169012112360672.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/collection-7-1187169012112360672.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/index-1-1187169012112360672.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/index-1-1187169012112360672.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/index-8-1187169012112360672.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/index-8-1187169012112360672.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db/journal/WiredTigerLog.0000000010" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/db/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/database/db/sizeStorer.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utills/~$博客前端需求.DOCX" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,20 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="462">
+              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Control/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-420">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="471">
+              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -99,7 +61,7 @@
       <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="84">
               <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="33" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -122,15 +84,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
               <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Control/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="3" selection-start-line="11" selection-start-column="1" selection-end-line="28" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -222,11 +175,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="286" />
-    <option name="y" value="136" />
-    <option name="width" value="1370" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="351" />
+    <option name="y" value="51" />
+    <option name="width" value="1399" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -327,26 +280,28 @@
       <workItem from="1578875614053" duration="2166000" />
       <workItem from="1578962164572" duration="905000" />
       <workItem from="1584421491655" duration="5434000" />
+      <workItem from="1584492503752" duration="1176000" />
+      <workItem from="1584586052837" duration="6620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70650000" />
+    <option name="totallyTimeSpent" value="78446000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2064" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="2064" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10463969" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.093780845" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.34678298" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2944384" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -382,13 +337,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -710,16 +658,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="84">
           <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -734,13 +675,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Control/category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="471">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
         </state>
       </provider>
     </entry>

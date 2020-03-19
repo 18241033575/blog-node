@@ -6,6 +6,9 @@
 
 // 使用schema
 const Category = require('../Schema/category');
+// 重新连接表
+
+
 // 操作方法
 // 获取分类列表
 const getCategory = async (ctx, next) => {
@@ -24,25 +27,61 @@ const getCategory = async (ctx, next) => {
         }
     }
 };
-// 添加分类
+// 添加、编辑分类
 const addCategory = async (ctx, next) => {
     const req = ctx.request.body;
-    console.log(req);
+    const findCategoryValue = await Category.findOne({value: req.value});
+
     if (req.type === 'add') {
-        const category = await Category.insert({value: req.value});
-        if (category) {
+        if (findCategoryValue) {
+            ctx.body = {
+                code: 400,
+                msg: '添加失败，已经存在该分类'
+            }
+        } else {
+            const categoryAdd = await Category.create({value: req.value, id: 2});
+            if (categoryAdd) {
+                ctx.body = {
+                    code: 200,
+                    msg: '添加成功'
+                }
+            } else {
+                ctx.body = {
+                    code: 400,
+                    msg: '添加失败'
+                }
+            }
+        }
+    } else if(req.type === 'edit') {
+        const categoryEdit = await Category.updateOne({ id: req.id }, { $set: req});
+        console.log(123);
+        console.log(categoryEdit.ok);
+        if (categoryEdit) {
             ctx.body = {
                 code: 200,
-                msg: '添加成功'
+                msg: '编辑成功'
             }
         } else {
             ctx.body = {
                 code: 400,
-                msg: '添加失败'
+                msg: '编辑失败'
+            }
+        }
+    }else {
+        const categoryDel = await Category.deleteOne({value: req.value});
+        console.log(categoryDel);
+        if (categoryDel) {
+            ctx.body = {
+                code: 200,
+                msg: '删除成功'
+            }
+        } else {
+            ctx.body = {
+                code: 400,
+                msg: '删除失败'
             }
         }
     }
-
 };
 
 
