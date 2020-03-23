@@ -1,8 +1,8 @@
 const {mongoose, Schema} = require('./config');
 
 const categorySchema = new Schema({
-    id: Number,
-    value: String
+    id:      { type: String, required: true },
+    value:       { type: String, required: true },
 }, {
     collection: 'category',
     versionKey: false

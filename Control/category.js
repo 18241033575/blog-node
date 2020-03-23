@@ -53,8 +53,11 @@ const addCategory = async (ctx, next) => {
             }
         }
     } else if(req.type === 'edit') {
-        const categoryEdit = await Category.updateOne({ id: req.id }, { $set: req});
-        console.log(123);
+        console.log(req);
+        const test = await Category.findOne({ _id: req._id });
+        console.log(test);
+        const categoryEdit = await Category.updateOne({ _id: req._id }, {value: req.value});
+        console.log(categoryEdit);
         console.log(categoryEdit.ok);
         if (categoryEdit) {
             ctx.body = {
