@@ -24,11 +24,13 @@ mongoose.connect(config.db, {useNewUrlParser:true}, (err) => {
 const category = require('./routers/category');
 const links = require('./routers/links');
 const projects = require('./routers/projects');
+const netUser = require('./routers/netUser');
 
 
 app.use(category.routes()).use(category.allowedMethods());
 app.use(links.routes()).use(links.allowedMethods());
 app.use(projects.routes()).use(projects.allowedMethods());
+app.use(netUser.routes()).use(netUser.allowedMethods());
 
 
 
