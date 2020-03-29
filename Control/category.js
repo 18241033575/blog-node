@@ -53,13 +53,8 @@ const addCategory = async (ctx, next) => {
             }
         }
     } else if(req.type === 'edit') {
-        console.log(req);
-        const test = await Category.findOne({ _id: req._id });
-        console.log(test);
-        const categoryEdit = await Category.updateOne({ _id: req._id }, {value: req.value});
-        console.log(categoryEdit);
-        console.log(categoryEdit.ok);
-        if (categoryEdit) {
+        const categoryEdit = await Category.updateOne({ _id: req._id }, req);
+        if (categoryEdit.n === 1 && categoryEdit.nModified === 1 && categoryEdit.ok === 1) {
             ctx.body = {
                 code: 200,
                 msg: '编辑成功'
