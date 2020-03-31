@@ -67,7 +67,6 @@ const addCategory = async (ctx, next) => {
         }
     }else {
         const categoryDel = await Category.deleteOne({value: req.value});
-        console.log(categoryDel);
         if (categoryDel) {
             ctx.body = {
                 code: 200,
