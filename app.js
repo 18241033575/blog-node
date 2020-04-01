@@ -27,6 +27,7 @@ const projects = require('./routers/projects');
 
 const netUser = require('./routers/netUser');
 const netSetting = require('./routers/netSetting');
+const administrator = require('./routers/administrator');
 
 
 app.use(category.routes()).use(category.allowedMethods());
@@ -34,6 +35,7 @@ app.use(links.routes()).use(links.allowedMethods());
 app.use(projects.routes()).use(projects.allowedMethods());
 app.use(netUser.routes()).use(netUser.allowedMethods());
 app.use(netSetting.routes()).use(netSetting.allowedMethods());
+app.use(administrator.routes()).use(administrator.allowedMethods());
 
 
 
