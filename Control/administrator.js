@@ -28,7 +28,7 @@ const getAdministrator = async (ctx, next) => {
 
 const setAdministrator = async (ctx, next) => {
     const req = ctx.request.body;
-
+    console.log(req.type);
     switch (req.type) {
         case 'neAdmin':     // 获取非管理员列表
             const administrator = await Administrator.find({auth: {$lt: 5}});
@@ -45,21 +45,28 @@ const setAdministrator = async (ctx, next) => {
             }
             break;
         case 'addAdmin':    // 添加为管理员
-            const administratorAdd = await Administrator.updateOne({ _id: req._id }, {auth: 5});
+
+            const midFind = await Administrator.find({ name: req.name });
+            let midData = midFind[0];
+            console.log(midData);
+            midData.auth = 5;
+            /// 单独更新失败
+            const administratorAdd = await Administrator.updateOne({ name: req.name }, midData);
+            console.log(administratorAdd);
             if (administratorAdd.n === 1 && administratorAdd.nModified === 1 && administratorAdd.ok === 1) {
                 ctx.body = {
                     code: 200,
-                    msg: '编辑成功'
+                    msg: '添加成功'
                 }
             } else {
                 ctx.body = {
                     code: 400,
-                    msg: '编辑失败'
+                    msg: '添加失败'
                 }
             }
             break;
         case 'delAdmin':    // 删除管理员
-            const administratorDel = await Administrator.deleteOne({_id: req._id});
+            const administratorDel = await Administrator.updateOne({ _id: req._id }, {auth: 1});
             if (administratorDel.n === 1 && administratorDel.nModified === 1 && administratorDel.ok === 1) {
                 ctx.body = {
                     code: 200,
