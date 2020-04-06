@@ -1,8 +1,9 @@
 const {mongoose, Schema} = require('./config');
 
 const administratorSchema = new Schema({
-    id:      { type: String, required: true },
-    value:       { type: String, required: true },
+    name:     { type: String, required: true },
+    groupName: { type: String },
+    auth: { type: Number }
 }, {
     collection: 'user',
     versionKey: false

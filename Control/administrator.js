@@ -6,7 +6,6 @@
 
 // 使用schema
 const Administrator = require('../Schema/administrator');
-// 重新连接表
 
 
 // 操作方法
@@ -48,8 +47,9 @@ const setAdministrator = async (ctx, next) => {
 
             const midFind = await Administrator.find({ name: req.name });
             let midData = midFind[0];
-            console.log(midData);
+            console.log(typeof midData);
             midData.auth = 5;
+            console.log(midData);
             /// 单独更新失败
             const administratorAdd = await Administrator.updateOne({ name: req.name }, midData);
             console.log(administratorAdd);

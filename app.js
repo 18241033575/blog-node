@@ -28,6 +28,7 @@ const projects = require('./routers/projects');
 const netUser = require('./routers/netUser');
 const netSetting = require('./routers/netSetting');
 const administrator = require('./routers/administrator');
+const disclaimer = require('./routers/disclaimer');
 
 
 app.use(category.routes()).use(category.allowedMethods());
@@ -36,6 +37,7 @@ app.use(projects.routes()).use(projects.allowedMethods());
 app.use(netUser.routes()).use(netUser.allowedMethods());
 app.use(netSetting.routes()).use(netSetting.allowedMethods());
 app.use(administrator.routes()).use(administrator.allowedMethods());
+app.use(disclaimer.routes()).use(disclaimer.allowedMethods());
 
 
 

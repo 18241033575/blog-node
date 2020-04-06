@@ -39,7 +39,7 @@ const addCategory = async (ctx, next) => {
                 msg: '添加失败，已经存在该分类'
             }
         } else {
-            const categoryAdd = await Category.create({value: req.value, id: 2});
+            const categoryAdd = await Category.create({value: req.value});
             if (categoryAdd) {
                 ctx.body = {
                     code: 200,
@@ -81,51 +81,9 @@ const addCategory = async (ctx, next) => {
     }
 };
 
-// 编辑分类
-const editCategory = async (ctx, next) => {
-    const req = ctx.request.body;
-    if (req.type !== 'edit' && !req.id) {
-        ctx.body = {
-            code: 400,
-            msg: '参数有误'
-        };
-        return
-    }
-    console.log(Category);
-    const category = await Category.insertOne({id: req.id}, {$set: {value: req.value}});
-    if (category) {
-        ctx.body = {
-            code: 200,
-            msg: '修改成功'
-        }
-    } else {
-        ctx.body = {
-            code: 400,
-            msg: '修改失败'
-        }
-    }
-};
 
-// 删除分类
-const delCategory = async (ctx, next) => {
-    const req = ctx.request.body;
-    const category = await Category.remove({id: req.id}, {justOne: true})
-    if (category) {
-        ctx.body = {
-            code: 200,
-            msg: '删除成功'
-        }
-    } else {
-        ctx.body = {
-            code: 400,
-            msg: '删除失败'
-        }
-    }
-};
 
 module.exports = {
     getCategory,
-    addCategory,
-    editCategory,
-    delCategory
+    addCategory
 };
