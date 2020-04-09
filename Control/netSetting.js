@@ -28,17 +28,52 @@ const getNetSetting = async (ctx, next) => {
 // 添加、编辑分类
 const setNetSetting = async (ctx, next) => {
     const req = ctx.request.body;
-
-    const netSetEdit = await NetSetting.updateOne({ _id: req._id }, req);
-    if (netSetEdit.n === 1 && netSetEdit.nModified === 1 && netSetEdit.ok === 1) {
-        ctx.body = {
-            code: 200,
-            msg: '编辑成功'
+    if (req.type === 'add') {
+        const findSettingValue = await NetSetting.findOne({keyName: req.keyName});
+        if (findSettingValue) {
+            ctx.body = {
+                code: 400,
+                msg: '添加失败，已经存在该键值对'
+            }
+        } else {
+            const settingAdd = await NetSetting.create({value: req.value, keyName: req.keyName});
+            if (settingAdd) {
+                ctx.body = {
+                    code: 200,
+                    msg: '添加成功'
+                }
+            } else {
+                ctx.body = {
+                    code: 400,
+                    msg: '添加失败'
+                }
+            }
         }
-    } else {
-        ctx.body = {
-            code: 400,
-            msg: '编辑失败'
+    } else if(req.type === 'edit') {
+        const settingEdit = await NetSetting.updateOne({ _id: req._id }, { keyName: req.keyName, value: req.value });
+        if (settingEdit.n === 1 && settingEdit.nModified === 1 && settingEdit.ok === 1) {
+            ctx.body = {
+                code: 200,
+                msg: '编辑成功'
+            }
+        } else {
+            ctx.body = {
+                code: 400,
+                msg: '编辑失败'
+            }
+        }
+    }else {
+        const settingDel = await NetSetting.deleteOne({_id: req._id});
+        if (settingDel) {
+            ctx.body = {
+                code: 200,
+                msg: '删除成功'
+            }
+        } else {
+            ctx.body = {
+                code: 400,
+                msg: '删除失败'
+            }
         }
     }
 };

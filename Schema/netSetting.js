@@ -1,7 +1,7 @@
 const {mongoose, Schema} = require('./config');
 
 const netSettingSchema = new Schema({
-    key:      { type: String, required: true },
+    keyName:      { type: String, required: true },
     value:  { type: String, required: true },
 }, {
     collection: 'netSet',
