@@ -12,9 +12,7 @@ const User = require('../Schema/user');
 // 登录获取登陆信息
 const userLogin = async (ctx, next) => {
     const req = ctx.request.body;
-    console.log(req);
     const user = await User.findOne({name: req.username, password: req.password});
-    console.log(user);
     if (user) {
         ctx.body = {
             code: 200,
@@ -23,7 +21,6 @@ const userLogin = async (ctx, next) => {
         }
     } else {
         const userCount = await User.findOne({name: req.username});
-        console.log(userCount);
         if (userCount) {
             ctx.body = {
                 code: 400,
