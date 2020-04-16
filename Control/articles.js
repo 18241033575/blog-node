@@ -12,8 +12,10 @@ const Articles = require('../Schema/articles');
 // 操作方法
 // 获取文章列表
 const getArticles = async (ctx, next) => {
-
-    const article = await Articles.find().sort({_id: -1});
+    const title = ctx.query.title;  // 根据标题获取文章
+    const tag = ctx.query.tag;      // 根据标签获取文章
+    const hot = ctx.query.hot;      // 根据热度获取文章 -- 后续功能
+    const article = title ? await Articles.find({title}).sort({_id: -1}) : (tag ? await Articles.find({"tags": {$regex: tag}}).sort({_id: -1}) :await Articles.find({}).sort({_id: -1}));
     if (article) {
         ctx.body = {
             code: 200,
