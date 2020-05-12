@@ -40,7 +40,7 @@ const addArticles = async (ctx, next) => {
                 msg: '添加失败，已经存在该文章'
             }
         } else {
-            const categoryAdd = await Articles.create({title: req.title, tags: req.tags, content: req.content});
+            const categoryAdd = await Articles.create({title: req.title, tags: req.tags, content: req.content, intro: req.intro});
             if (categoryAdd) {
                 ctx.body = {
                     code: 200,
