@@ -36,7 +36,7 @@ const administrator = require('./routers/administrator');
 const disclaimer = require('./routers/disclaimer');
 const user = require('./routers/user');
 const article = require('./routers/articles');
-
+const blogUser = require('./routers/blogUser');
 
 app.use(category.routes()).use(category.allowedMethods());
 app.use(links.routes()).use(links.allowedMethods());
@@ -47,6 +47,7 @@ app.use(administrator.routes()).use(administrator.allowedMethods());
 app.use(disclaimer.routes()).use(disclaimer.allowedMethods());
 app.use(user.routes()).use(user.allowedMethods());
 app.use(article.routes()).use(article.allowedMethods());
+app.use(blogUser.routes()).use(blogUser.allowedMethods());
 
 
 
