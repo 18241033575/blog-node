@@ -37,6 +37,7 @@ const disclaimer = require('./routers/disclaimer');
 const user = require('./routers/user');
 const article = require('./routers/articles');
 const blogUser = require('./routers/blogUser');
+const aboutMe = require('./routers/aboutMe');
 
 app.use(category.routes()).use(category.allowedMethods());
 app.use(links.routes()).use(links.allowedMethods());
@@ -48,6 +49,7 @@ app.use(disclaimer.routes()).use(disclaimer.allowedMethods());
 app.use(user.routes()).use(user.allowedMethods());
 app.use(article.routes()).use(article.allowedMethods());
 app.use(blogUser.routes()).use(blogUser.allowedMethods());
+app.use(aboutMe.routes()).use(aboutMe.allowedMethods());
 
 
 

@@ -5,6 +5,7 @@ const articlesSchema = new Schema({
     tags:      { type: String, required: true },
     content:      { type: String, required: true },
     intro:      { type: String },
+    hot: { type: Boolean }
 }, {
     collection: 'articles',
     versionKey: false

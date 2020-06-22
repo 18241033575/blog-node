@@ -15,7 +15,12 @@ const getArticles = async (ctx, next) => {
     const title = ctx.query.title;  // 根据标题获取文章
     const tag = ctx.query.tag;      // 根据标签获取文章
     const hot = ctx.query.hot;      // 根据热度获取文章 -- 后续功能
-    const article = title ? await Articles.find({title}).sort({_id: -1}) : (tag ? await Articles.find({"tags": {$regex: tag}}).sort({_id: -1}) :await Articles.find({}).sort({_id: -1}));
+    let article;
+    if (hot) {
+        article = await Articles.find({ hot: true }).sort({_id: -1})
+    } else {
+        article = title ? await Articles.find({title, hot: false}).sort({_id: -1}) : (tag ? await Articles.find({"tags": {$regex: tag}, hot: false}).sort({_id: -1}) :await Articles.find({hot: false}).sort({_id: -1}));
+    }
     if (article) {
         ctx.body = {
             code: 200,
@@ -40,7 +45,7 @@ const addArticles = async (ctx, next) => {
                 msg: '添加失败，已经存在该文章'
             }
         } else {
-            const categoryAdd = await Articles.create({title: req.title, tags: req.tags, content: req.content, intro: req.intro});
+            const categoryAdd = await Articles.create({title: req.title, tags: req.tags, content: req.content, intro: req.intro, hot: req.hot});
             if (categoryAdd) {
                 ctx.body = {
                     code: 200,
